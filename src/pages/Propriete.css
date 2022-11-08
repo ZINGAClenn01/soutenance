@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.align{
+    align-items: center
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+@media only screen and (max-width: 600px) {
+    .titre-haut{
+        margin-top: 4vw;
+    }
+    .maison-moderne{
+        margin-top: 4vw;
+    }
+
+
+
+    .occasion-vente img{
+        height: 10vh;
+        width: 30vw;
+    }
+    .occasion-vente .h4{
+        margin-bottom: 4vw;
+        margin-top: 4vw;
+    }
+}

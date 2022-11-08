@@ -51,12 +51,15 @@ body{
     border-radius: 4vw;
     height: 5vh;
 }
+
+
 .card{
     height: 35vh;
     width: 100vw;
     /* background: url(../assets/images/a-louer.png); */
-    margin-left: 5vw;
+    
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-top: 5vw;
     position: relative;

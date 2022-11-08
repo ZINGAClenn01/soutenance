@@ -1,5 +1,6 @@
 import { React } from "react";
-import { useState } from "react";
+// import { useState } from "react";
+import { Link } from "react-router-dom";
 import './Search.css'
 // import image from '../assets/images/imagehome.png'
 
@@ -22,26 +23,16 @@ const Search = () => {
 
     return (
         <div className="Search">
+            <div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" className="input-search" placeholder="RECHERCHER"/>
 
-            <input type="text" className="input-search" placeholder="RECHERCHER"/>
-
-            <button> filter</button>
-
-
-
-
+            </div>
+            <button><Link> <i class="fa-regular fa-filter"></i></Link></button>
 
 
 
-
-
-
-
-
-
-
-
-                {/* <input type="text" placeholder="name"
+            {/* <input type="text" placeholder="name"
             onChange={(e) => {
                 SetSearchTerm(e.target.value)
             }} />
@@ -53,7 +44,7 @@ const Search = () => {
                 }
             }).map((nom,age) => {
                 return <div><p>{nom.nom}</p></div>
-            })} */}
+            })}  */}
         </div>
     )
 }

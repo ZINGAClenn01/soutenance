@@ -4,88 +4,114 @@
     font-family: sans-serif;
 }
 
-.app{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .app{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+    }
+    
+    .app .haut{
+        height: 30vh;
+        width: 100vw;
+        background-color: #15679F;
+    }
+    .app h2{ 
+        line-height: 13vw;
+        letter-spacing: 0.22vw;
+        font-size: 7.5vw;
+        font-weight: bold;
+        font-family: sans-serif;
+        color: white;
+        position: absolute;
+        top: 26vw;
+        left: 18vw;
+    
+    }
+    .app .image{
+        background: url(../assets/images/imagehome.png);
+        background-size: cover;
+        height: 70vh;
+        position: absolute;
+        width: 100vw;
+        top: 20vw;
+        z-index: -1;
+    }
+    .app .sousimage{
+        background-color: #15679F ;
+        height: 20vh;
+        position: absolute;
+        width: 100vw;
+        top: 130vw;
+        z-index: -1;
+    }
+    
+    .app .black{
+        background-color: white;
+        height: 15vh;
+        width: 100vw;
+        margin-bottom: 0vw;
+        position: absolute;
+        border-radius: 50% ;
+        bottom: 25.5vw;
+        z-index: 1;
+    }
+    .app .blanc{
+        background-color: white;
+        height: 20vh;
+        width: 100vw;
+        bottom: 0;
+        position: absolute;
+        /* border-radius: 20vw 15vw 0 0; */
+        margin-bottom: 0vw;
+    }
+    .app button{
+        position: absolute;
+        bottom: 12vw;
+        z-index: 1;
+        height: 7vh;
+        width: 68vw;
+        background-color: black;
+        border-radius: 7vw;
+    }
+    
+    .app .link{
+        color: white;
+        font-size: 4vw;
+        text-decoration: none;
+    }
+    .app p{
+        z-index: 3;
+        position: absolute;
+        bottom: 33vw;
+        font-weight: bold;
+        text-align: center;
+        line-height: 5vw;
+    }
+
+
+
+
+
+
+
 }
 
-.app .haut{
-    height: 30vh;
-    width: 100vw;
-    background-color: #15679F;
-}
-.app h2{ 
-    line-height: 13vw;
-    letter-spacing: 0.22vw;
-    font-size: 7.5vw;
-    font-weight: bold;
-    font-family: sans-serif;
-    color: white;
-    position: absolute;
-    top: 26vw;
-    left: 18vw;
 
-}
-.app .image{
-    background: url(../assets/images/imagehome.png);
-    background-size: cover;
-    height: 70vh;
-    position: absolute;
-    width: 100vw;
-    top: 20vw;
-    z-index: -1;
-}
-.app .sousimage{
-    background-color: #15679F ;
-    height: 20vh;
-    position: absolute;
-    width: 100vw;
-    top: 130vw;
-    z-index: -1;
-}
 
-.app .black{
-    background-color: white;
-    height: 15vh;
-    width: 100vw;
-    margin-bottom: 0vw;
-    position: absolute;
-    border-radius: 50% ;
-    bottom: 25.5vw;
-    z-index: 1;
-}
-.app .blanc{
-    background-color: white;
-    height: 20vh;
-    width: 100vw;
-    bottom: 0;
-    position: absolute;
-    /* border-radius: 20vw 15vw 0 0; */
-    margin-bottom: 0vw;
-}
-.app button{
-    position: absolute;
-    bottom: 12vw;
-    z-index: 1;
-    height: 7vh;
-    width: 68vw;
-    background-color: black;
-    border-radius: 7vw;
-}
 
-.app .link{
-    color: white;
-    font-size: 4vw;
-    text-decoration: none;
-}
-.app p{
-    z-index: 3;
-    position: absolute;
-    bottom: 33vw;
-    font-weight: bold;
-    text-align: center;
-    line-height: 5vw;
-}
+
+
