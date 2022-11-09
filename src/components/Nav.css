@@ -4,7 +4,7 @@
     justify-content: space-around;
     width: 100vw;
     position: fixed;
-    bottom: 0;
+    bottom: 0vw;
     height: 10vh;
     background-color: #F1F3F5;
 }
@@ -13,4 +13,13 @@
     align-items: center;
     justify-content: space-around;
     width: 100vw;
+
+}
+.link i {
+    font-size: 7vw;
+    border: none;
+    color: #95A0BE;
+}
+.link{
+    text-decoration: none;
 }

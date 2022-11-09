@@ -59,19 +59,10 @@
         z-index: -1;
     }
     
-    .app .black{
-        background-color: white;
-        height: 15vh;
-        width: 100vw;
-        margin-bottom: 0vw;
-        position: absolute;
-        border-radius: 50% ;
-        bottom: 25.5vw;
-        z-index: 1;
-    }
+  
     .app .blanc{
         background-color: white;
-        height: 20vh;
+        height: 23vh;
         width: 100vw;
         bottom: 0;
         position: absolute;

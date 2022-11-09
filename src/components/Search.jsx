@@ -23,12 +23,11 @@ const Search = () => {
 
     return (
         <div className="Search">
-            <div>
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <div className="barre">
+                <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" className="input-search" placeholder="RECHERCHER"/>
-
             </div>
-            <button><Link> <i class="fa-regular fa-filter"></i></Link></button>
+            <button><Link> <i class="fa-solid fa-filter"></i></Link></button>
 
 
 

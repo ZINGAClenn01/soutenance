@@ -13,17 +13,28 @@
     
 }
 
-
+.barre{
+    background-color: #F1F3F5;
+    border-radius: 3vw;
+    width: 70vw;
+}
+.barre i{
+    margin-left: 5vw;
+}
+button i {
+    font-size: 5vw;
+}
 .Search .input-search{
     height: 5vh;
-    width: 65vw;
-    text-align: center;
+    margin-left: 10vw;
+    text-align: start;
     border: none;
-    background-color: #D9D9D9;
-    border-radius: 3vw;
+    background-color: #F1F3F5;
+    outline: #F1F3F5;
 }
 .Search button{
     height: 5vh;
-    width: 15vw;
+    width: 13vw;
     border-radius: 2vw;
+    background-color: #F1F3F5;
 }

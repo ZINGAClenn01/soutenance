@@ -5,13 +5,15 @@ import './Propriete.css'
 import imgAlouer from '../assets/images/Alouer.png'
 import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
+import Maison from "../components/Maison"
+import MaisonModerne from "../components/MaisonModerne"
 
 const Propriete = () => {
     return (
         <div>
             <Search/>
             <div className="titre-haut">
-                <a href="">Selamat Pagi</a>
+                <p>Selamat Pagi</p>
                 <p>
                     Hello Bonibarbar
                 </p>
@@ -20,21 +22,11 @@ const Propriete = () => {
                 <h4>
                     Nouvelles Maisons modernes
                 </h4>
-                <div className="row">
-                    <Link className="link" to='/detail-propriete'> <img src={imgAlouer} alt="" /></Link>
-                    <Link className="link" to='/detail-propriete'> <img src={imgAlouer} alt="" /></Link>
-                </div>
+                    
+                    <Maison/>
+                    <MaisonModerne/>
             </div>
-            <div className="maison-alouer">
-                <h4>
-                    Maisons a louer
-                </h4>
-                <div className="row">
-                    <Link className="link" to='/detail-propriete'> <img src={imgAlouer} alt="" /></Link>
-                    <Link className="link" to='/detail-propriete'> <img src={imgAlouer} alt="" /></Link>
-                    <Link className="link" to='/detail-propriete'> <img src={imgAlouer} alt="" /></Link>
-                </div>
-            </div>
+            
             <div className="occasion-vente">
                 <h4 className="h4">
                     Occasion de vente

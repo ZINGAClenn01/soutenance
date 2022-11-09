@@ -14,13 +14,13 @@ const About = () => {
                 <div className="button">
                     <button>
                         <div>
-                            <p>quartier</p>
+                            <p><i class="fa-solid fa-location-dot"></i></p>
                             <p>Quartier</p>
                         </div>
                     </button>
                     <button>
                         <div>
-                            <p>quartier</p>
+                            <p><i class="fa-solid fa-calendar"></i></p>
                             <p>Quartier</p>
                         </div>
                     </button>
@@ -46,12 +46,12 @@ const About = () => {
                             </p>
                         </div>
                         <div className="div-quartier">
-                            <p> Ntchengue, derriere soco-tp</p>
+                            <p><i class="fa-solid fa-map-location-dot"></i> Ntchengue, derriere soco-tp</p>
                         </div>
                         <div className="row div-quartier-plus">
-                            <p> Tout inclus</p>
-                            <p> Avec wifi</p>
-                            <p> periode indeterminees</p>
+                            <p><i class="fa-sharp fa-solid fa-light-emergency"></i> Tout inclus</p>
+                            <p> <i class="fa-solid fa-house-signal"></i> wifi</p>
+                            <p><i class="fa-solid fa-calendar"></i> periode indeterminees</p>
                         </div>
                     </div>
                 </div>

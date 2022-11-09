@@ -27,7 +27,7 @@ const Home = () => {
             <div className="image"> </div>
             <div className="sousimage"> </div>
             <div className="sousimage-blue"> </div>
-            <div className="black"></div>
+            
             <div className="blanc"></div>
             <p>Trouver une maison devient faciler</p>
             <button>
