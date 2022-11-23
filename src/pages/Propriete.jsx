@@ -5,13 +5,48 @@ import './Propriete.css'
 import imgAlouer from '../assets/images/Alouer.png'
 import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
-import Maison from "../components/Maison"
+// import Maison from "../components/Maison"
 import MaisonModerne from "../components/MaisonModerne"
+import axios from 'axios';
+import { useState, useEffect } from "react";
 
 const Propriete = () => {
+
+    const [maisons, setMaisons] = useState([])
+
+    
+    useEffect(() => {
+        const fetchMaisons = async () => {
+            const result = await axios(
+                'http://localhost:3001/maisons',
+            );
+            setMaisons(result.data);
+        };
+        fetchMaisons();
+    },[])
+    console.log(maisons)
+
+
+    const [quartiers, setQuartiers] = useState([])
+
+    
+    useEffect(() => {
+        const fetchQuartiers = async () => {
+            const resultat = await axios(
+                'http://localhost:3001/quartiers',
+            );
+            setQuartiers(resultat.data);
+        
+        };
+        fetchQuartiers();
+    },[])
+    console.log(quartiers)
+
     return (
         <div>
-            <Search/>
+            <Search />
+            <MaisonModerne />
+
             <div className="titre-haut">
                 <p>Selamat Pagi</p>
                 <p>
@@ -23,8 +58,7 @@ const Propriete = () => {
                     Nouvelles Maisons modernes
                 </h4>
                     
-                    <Maison/>
-                    <MaisonModerne/>
+                    
             </div>
             
             <div className="occasion-vente">
@@ -47,7 +81,7 @@ const Propriete = () => {
                    
                 </div>
             </div>
-            <Nav/>
+             
         </div>
     )
 }

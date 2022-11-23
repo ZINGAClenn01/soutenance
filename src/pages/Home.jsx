@@ -1,6 +1,10 @@
 import React from "react";
 import './Home.css'
 import { Link } from "react-router-dom";
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import Nav from "../components/Nav";
+
 // import { useState } from "react";
 // import image from '../assets/images/imagehome.png'
 
@@ -18,52 +22,47 @@ const Home = () => {
     // const [searchTerm, SetSearchTerm] = useState('')
   
     return (
-        <div className="app"> 
-            <div className="haut"></div>
+        <div className="application justifie1"> 
+
+            <div className="row justifie1 flex-col">
+                <div>
+                    <div className="top"></div>
+                    <h2>C’EST FACILE <br /> DE 
+                        TROUVER <br />  UNE MAISON <br /> A LOUER 
+                    </h2>
+                </div>
+                <div>
+                    <div className="image"> </div>
+                </div>
+                <div>
+                    <div className="blanc">
+                    <p>Trouver une maison devient faciler</p>
+                    <Button className="button-home">
+                        <Link className="link" to='/acceuil'> RECHERCHER UNE MAISON</Link>
+                    </Button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            {/* <div className="haut-bas">
+                <div className="haut"></div>
+                
+                <div className="sousimage-blue"> </div>
+                
+            </div>
+            <div className="haut"></div> 
 
             <h2>C’EST FACILE <br /> DE 
                 TROUVER <br />  UNE MAISON <br /> A LOUER 
             </h2>
-            <div className="image"> </div>
-            <div className="sousimage"> </div>
-            <div className="sousimage-blue"> </div>
-            
-            <div className="blanc"></div>
-            <p>Trouver une maison devient faciler</p>
-            <button>
-                <Link className="link" to='/acceuil'> RECHERCHER</Link>
-            </button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            {/* <input type="text" placeholder="name"
-            onChange={(e) => {
-                SetSearchTerm(e.target.value)
-            }} />
-            {list.filter((nom) => {
-                if (searchTerm== '') {
-                    return nom
-                } else if (nom.nom.toLowerCase().includes(searchTerm.toLowerCase())) {
-                    return nom
-                }
-            }).map((nom,age) => {
-                return <div><p>{nom.nom}</p></div>
-            })} */}
+             
+             */}
         </div>
     );
 }

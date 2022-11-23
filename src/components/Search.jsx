@@ -1,6 +1,6 @@
 import { React } from "react";
 // import { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import './Search.css'
 // import image from '../assets/images/imagehome.png'
 
@@ -18,7 +18,7 @@ import './Search.css'
 
 
 const Search = () => {
-
+   
     //  const [searchTerm, SetSearchTerm] = useState('')
 
     return (
@@ -27,8 +27,8 @@ const Search = () => {
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" className="input-search" placeholder="RECHERCHER"/>
             </div>
-            <button><Link> <i class="fa-solid fa-filter"></i></Link></button>
-
+            
+        
 
 
             {/* <input type="text" placeholder="name"

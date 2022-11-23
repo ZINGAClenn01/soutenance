@@ -1,5 +1,5 @@
 import React from "react";
-// import Search from "../components/Search";
+import Search from "../components/Search";
 // import Categories from "../components/Categories"
 import './About.css'
 // import alouer from '../assets/images/a-louer.png'
@@ -12,10 +12,6 @@ import { useState, useEffect } from "react";
 
 const About = () => {
 
-    const [allHouse, setAllHouse] = useState(false)
-
-
-    
     const [data, setData] = useState([])
     useEffect(() => {
         const fetchData = async () => {
@@ -53,16 +49,15 @@ const About = () => {
      const [idcategorie, setidcategorie] = useState("")
 
     const maisonFlitrer = maisons.filter((item) =>{
-      return item.id_categorie === idcategorie 
-    })
+      return item.id_categorie === idcategorie })
 
-      
-
+      const [AllMaisons, setAllMaisons] = useState(maisons)
+      console.log(maisons)
 
 
     return (
        <>
-            {/* <Search /> */}
+            <Search />
             <div >
                 <div className="button">
                     <Link to='/quartiers' >
@@ -86,57 +81,30 @@ const About = () => {
                  <div className="categories">
                     <div className="row justyfie1">
                         <p>Categories</p>
-                        <button  onClick={()=>{ setAllHouse(false)}}  className="btn-all">Toutes</button>
+                        <button onClick={()=>{setAllMaisons(maisons);}} className="btn-all">Toutes</button>
                     </div>
                     <div className="categories-btn" >
                         {data.map(item =>(
-                            <button className="Buttons" onClick={()=>{setidcategorie(item.id_categorie); console.log(idcategorie); setAllHouse(true)}} key={item.id}>{item.categorie} </button>
+                            <button onClick={()=>{setidcategorie(item.id_categorie); console.log(idcategorie);}} key={item.id}>{item.categorie} </button>
                         ))}
                     </div>
                 </div> 
 
+                <div>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-
-              {allHouse?(
-                 <div className="card">
-                 <div className="text-card">
-                      
-                     {maisonFlitrer.map(item =>(
-                         <div className="map-card" key={item.id}>
-                            <Link className="link" to={`/detail-propriete/${item.id_maison}`}>
-                                <img src={item.image1} alt="" />
-                            </Link>
-                             <div className="row justyfie2">
-                                 <p>
-                                     Maison Moderne en dure
-                                 </p> 
-                                 <p>
-                                     {item.prix}  
-                                 </p>
-                             </div>
-                             <div className="div-quartier">
-                                 <p><i class="fa-solid fa-map-location-dot"></i> {item.id_quartier}</p>
-                             </div>
-                             <div className="row div-quartier-plus">
-                                 <p><i class="fa-sharp fa-solid fa-light-emergency"></i> Tout inclus</p>
-                                 <p> <i class="fa-solid fa-house-signal"></i> wifi</p>
-                                 <p><i class="fa-solid fa-calendar"></i> periode indeterminees</p>
-                             </div>
-                         </div>
-                     ))}
-                     
-                     
-                 </div> 
-             </div>
-              ):(
-                <div className="card-nan-filter">
+                </div>
+                
+                <div className="card">
                     <div className="text-card">
-                        
+                        <Link className="link" to='/detail-propriete'> 
                         {maisons.map(item =>(
                             <div className="map-card" key={item.id}>
-                                <Link className="link" to={`/detail-propriete/${item.id_maison}`}> 
-                                  <img src={item.image1} alt="" />
-                                </Link>
+                                <img src={item.image1} alt="" />
                                 <div className="row justyfie2">
                                     <p>
                                         Maison Moderne en dure
@@ -155,16 +123,10 @@ const About = () => {
                                 </div>
                             </div>
                         ))}
-                        
+                        </Link>
                         
                     </div> 
                 </div>
-              )}
-                
-                
-
-
-               
                 {/* <div className="card">
                     
                     <div className="text-card">

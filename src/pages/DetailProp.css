@@ -2,3 +2,41 @@
     margin: auto;
     margin-top: 5vw;
 }
+
+.card{
+    height: 35vh;
+    width: 100vw;
+    /* background: url(../assets/images/a-louer.png); */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vw;
+    position: relative;
+    border-radius: 4vw;
+}
+.div-quartier{
+    margin-top: 1vw;
+    
+}
+.div-quartier-plus p{
+    font-size: 3.5vw;
+    justify-content: space-around;
+    margin: 0 2vw;
+}
+.div-quartier-plus {
+    margin-left: -2.5vw;
+    margin-top: 3vw;
+}
+.text-card{
+    width: 90vw;
+    
+}
+.map-card{
+    margin-top: 50vw;
+} 
+.text-card img{
+    width: 90vw;
+    margin-top: 10vw;
+   
+}

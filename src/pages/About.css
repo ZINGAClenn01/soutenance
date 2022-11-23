@@ -1,4 +1,4 @@
-*{
+ *{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
@@ -21,6 +21,7 @@ body{
     align-items: center;
     justify-content: space-evenly;
     margin-top: 5vw;
+    
 }
 .button button{
     padding: 5vw 4vw;
@@ -32,18 +33,30 @@ body{
     border-radius: 2vw;
     margin: 0 -10vw;
 }
+.btn-all{
+    width: 25vw;
+    height: 5vh;
+    background-color: white;
+    box-shadow: 2vw 2vw 2vw #e6e6e6, -0.01vw 0 0 #bebebe;
+    border: none;
+    z-index: 2;
+    border-radius: 2vw;
+}
+.Buttons{
+    z-index: 2;
+}
 
 .button p i{
     font-size: 8vw;
     margin-bottom: 5vw;
     color: #0a2525;
+    
 }
 .categories{
     margin-top: 5vw;
 }
 .categories .categories-btn{
     margin-top: 5vw;
-    
     display: flex;align-items: center;
     justify-content: space-evenly;
 }
@@ -57,20 +70,32 @@ body{
     border-radius: 4vw;
     height: 5vh;
 }
-
+.Buttons{
+    margin-bottom: 60vw;
+}
+.Buttons-all{
+    z-index: 1;
+}
+.card-nan-filter{
+    margin-top: 50vw;
+}
+/*.map-card{
+    margin-top: 20vw;
+}
 
 .card{
     height: 35vh;
     width: 100vw;
-    /* background: url(../assets/images/a-louer.png); */
+    background: url(../assets/images/a-louer.png);
     
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5vw;
+    margin-top: 50vw;
     position: relative;
     border-radius: 4vw;
 }
+
 .div-quartier{
     margin-top: 1vw;
     
@@ -90,6 +115,4 @@ body{
 }
 .text-card img{
     width: 90vw;
-    margin-top: 10vw;
-   
-}
+} */

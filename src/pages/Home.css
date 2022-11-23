@@ -3,6 +3,78 @@
     padding: 0;
     font-family: sans-serif;
 }
+.flex-col{
+    flex-direction: column;
+}
+.justifie1{
+    justify-content: space-between;
+}
+.application{
+    background-color: #15679F;
+    height: 100vh;
+    width: 100vw;
+   
+
+}
+.application .haut{
+    height: 30vh;
+    width: 100vw;
+    background-color: #15679F;
+    display: none;
+}
+.application .blanc{
+   background-color: white;
+    width: 100vw;
+    height: 40vh;
+    margin-top: -1vw;
+}
+.application h2{ 
+    line-height: 5vw;
+    letter-spacing: 0.22vw;
+    font-size: 5vw;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    margin-left: 12vw;
+    margin-top: 0vw;
+}
+.application .image{
+    background: url(../assets/images/imagehome.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30vh;
+    width: 100vw;
+    z-index: -1;
+}
+.application .button-home{
+    position: absolute;
+    bottom: 3vw;
+    z-index: 1;
+    left: 12vw;
+    height: 14vh;
+    width: 75vw;
+    background-color: black;
+    border-radius: 7vw;
+}
+.application .button-home:hover{
+    background-color: black;
+}
+
+.application .link{
+    color: white;
+    font-size: 4vw;
+    text-decoration: none;
+}
+.application p{
+    z-index: 3;
+    position: absolute;
+    bottom: 10vw;
+    left: 25vw;
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: center;
+    line-height: 5vw;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
@@ -11,94 +83,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 
-
-
-
-@media only screen and (max-width: 600px) {
-
-    .app{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+@media only screen and (max-width: 600px) {  
+    .application{
+        height: 100vh;
         width: 100vw;
+        background-color: #15679F;
+        justify-content: space-between;
     }
-    
-    .app .haut{
-        height: 30vh;
+    .justifie1{
+        justify-content: space-between;
+    }
+    .application .blanc{
+       background-color: white;
+       height: 22vh;
+        width: 100vw;
+        margin-top: 15.5vw;
+    }
+    .top{
+        height: 10vh;
         width: 100vw;
         background-color: #15679F;
     }
-    .app h2{ 
+    .application h2{ 
         line-height: 13vw;
         letter-spacing: 0.22vw;
         font-size: 7.5vw;
         font-weight: bold;
         font-family: sans-serif;
         color: white;
-        position: absolute;
-        top: 26vw;
-        left: 18vw;
-    
+        margin-left: 10vw;
     }
-    .app .image{
+    .application .image{
         background: url(../assets/images/imagehome.png);
         background-size: cover;
-        height: 70vh;
-        position: absolute;
+        background-repeat: no-repeat;
+        height: 30vh;
         width: 100vw;
-        top: 20vw;
         z-index: -1;
+        margin-top: 0.1vw;
     }
-    .app .sousimage{
-        background-color: #15679F ;
-        height: 20vh;
+    .application .button-home{
         position: absolute;
-        width: 100vw;
-        top: 130vw;
-        z-index: -1;
-    }
-    
-  
-    .app .blanc{
-        background-color: white;
-        height: 23vh;
-        width: 100vw;
-        bottom: 0;
-        position: absolute;
-        /* border-radius: 20vw 15vw 0 0; */
-        margin-bottom: 0vw;
-    }
-    .app button{
-        position: absolute;
-        bottom: 12vw;
+        bottom: 10vw;
         z-index: 1;
+        left: 10vw;
         height: 7vh;
-        width: 68vw;
+        width: 75vw;
         background-color: black;
         border-radius: 7vw;
     }
-    
-    .app .link{
+    .application .link{
         color: white;
         font-size: 4vw;
         text-decoration: none;
     }
-    .app p{
+    .application p{
         z-index: 3;
         position: absolute;
-        bottom: 33vw;
+        bottom: 28vw;
+        left: 23vw;
+        font-size: 3vw;
         font-weight: bold;
         text-align: center;
         line-height: 5vw;
     }
-
-
-
-
-
-
-
 }
 
 
