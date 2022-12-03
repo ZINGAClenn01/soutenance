@@ -1,62 +1,77 @@
 import React from "react";
-import './DetailProp.css'
+import "./DetailProp.css";
 import Nav from "../components/Nav";
-import axios from 'axios';
+import axios from "axios";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import Carousel from "react-bootstrap/Carousel";
 
 const DetailProp = () => {
+  const [maisons, setMaisons] = useState([]);
 
-    const [maisons, setMaisons] = useState([])
+  const idMaison = useLocation().pathname.split("/")[2];
+  // console.log(idMaison);
+  useEffect(() => {
+    const fetchMaisons = async () => {
+      const result = await axios("http://localhost:3001/maisons");
+      setMaisons(result.data);
+    };
+    fetchMaisons();
+  }, []);
 
-    const idMaison = useLocation().pathname.split('/')[2]
+  const result = maisons.filter(resVal);
 
-    useEffect(() => {
-        const fetchMaisons = async () => {
-            const result = await axios(
-                'http://localhost:3001/maisons',
-            );
-            setMaisons(result.data);
-        };
-        fetchMaisons();
-    },[])
-    
-    
-    const result = maisons.filter(resVal);
+  function resVal(maison) {
+    if (maison.id_maison == idMaison) {
+      return maison;
+    }
+  }
 
-    function resVal(maison) {  if(maison.id_maison==idMaison) {console.log(maison); return maison } }
-
-    return (
-        <div>
-             <div className="card">
-                    <div className="text-card">
-                        {result.map(item =>( 
-                            <div className="map-card"  key={item.id}>
-                                <h1> setId({item.id_maison}) </h1>
-                                <img src={item.image1} alt="" />
-                                <div className="row justyfie2">
-                                    <p>
-                                        {item.prix}  
-                                    </p> 
-                                    <p>
-                                        {item.prix}  
-                                    </p>
-                                </div>
-                                <div className="div-quartier">
-                                    <p><i class="fa-solid fa-map-location-dot"></i> {item.id_quartier}</p>
-                                </div>
-                                <div className="row div-quartier-plus">
-                                    <p>{item.description}</p>
-                                    
-                                </div>
-                            </div>
-                        ))}
-                    
-                        
-                    </div> 
-                </div>
-            <Nav/>
+  return (
+    <div>
+      <div className="card">
+        <div className="text-card">
+          {result.map((item) => (
+            <div className="map-card" key={item.id}>
+              <Carousel
+                className="Carousel card col-md-8 col-sm-12 mb-5 shadow-sm ml-10"
+                variant="dark"
+              >
+                <Carousel.Item>
+                  <img
+                    className="d-block w-75"
+                    src={item.image1}
+                    alt="First slide"
+                  />
+                  <h5>{item.prix + " " + "FCFA"} </h5>
+                  <p>{item.description}</p>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={item.image2}
+                    alt="Second slide"
+                  />
+                  <h5>{item.prix + " " + "FCFA"} </h5>
+                  <p>{item.description}</p>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={item.image3}
+                    alt="Third slide"
+                  />
+                  <h5>{item.prix + " " + "FCFA"} </h5>
+                  <p>{item.description}</p>
+                </Carousel.Item>
+              </Carousel>
+            </div>
+          ))}
         </div>
-    )}
+      </div>
+      <Nav />
+    </div>
+  );
+};
 
-export default DetailProp
+export default DetailProp;

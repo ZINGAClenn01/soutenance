@@ -1,17 +1,12 @@
-.img-space img{
-    transform: translateY(25vw);
 
-}
 h5,p {
     color: black;
     transform: translateY(5vw);
 }
 
-.card{
+/* .card{
     height: 35vh;
     width: 100vw;
-    /* background: url(../assets/images/a-louer.png); */
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,4 +38,4 @@ h5,p {
     width: 90vw;
     margin-top: 10vw;
    
-}
+} */

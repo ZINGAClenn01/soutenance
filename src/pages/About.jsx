@@ -1,13 +1,14 @@
 import React from "react";
-// import Search from "../components/Search";
-// import Categories from "../components/Categories"
 import './About.css'
-// import alouer from '../assets/images/a-louer.png'
-// import imgAlouer from '../assets/images/Alouer.png'
 import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
 import axios from 'axios';
 import { useState, useEffect } from "react";
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import RoomIcon from '@mui/icons-material/Room';
+
 
 
 const About = () => {
@@ -49,6 +50,7 @@ const About = () => {
         };
         fetchQuartiers();
     },[])
+
     
      const [idcategorie, setidcategorie] = useState("")
 
@@ -64,151 +66,141 @@ const About = () => {
        <>
             {/* <Search /> */}
             <div >
-                <div className="button">
+                <div className="button button-mobile">
                     <Link to='/quartiers' >
-                        <button>
+                        <Button>
                             <div>
                                 <p><i class="fa-solid fa-location-dot"></i></p>
                                 <p>Quartier</p>
                             </div>
-                        </button>
+                        </Button>
                     </Link>
                     <Link to='/propriete'>
-                        <button>
+                        <Button>
                             <div>
                                 <p><i class="fa-solid fa-calendar"></i></p>
                                 <p>A la une</p>
                             </div>
-                        </button>
+                        </Button>
+                    </Link>
+                </div>
+                <div className="button-desketop">
+                    <Link to='/quartiers' >
+                        <Button className="Buttons-desk">
+                            <div className="icon-text-desk">
+                                <p><i class="fa-solid fa-location-dot"></i></p>
+                                <p>Quartier</p>
+                            </div>
+                        </Button>
+                    </Link>
+                    <Link to='/propriete'>
+                        <Button className="Buttons-desk">
+                            <div className="icon-text-desk">
+                                <p><i class="fa-solid fa-calendar"></i></p>
+                                <p>A la une</p>
+                            </div>
+                        </Button>
                     </Link>
                 </div>
                 {/* <Categories/> */}
-                 <div className="categories">
-                    <div className="row justyfie1">
-                        <p>Categories</p>
-                        <button  onClick={()=>{ setAllHouse(false)}}  className="btn-all">Toutes</button>
+                <div className="categories categories-mobile">
+                    <p>Categories</p>
+                    <div className="ButtonGroup">
+                        
+                        {/* <button  onClick={()=>{ setAllHouse(false)}}  className="button-all">Toutes</button> */}
+                        
+                            <Button className="button-all" onClick={()=>{ setAllHouse(false)}}  variant="secondary">Toutes les maisons</Button>
+                        
                     </div>
                     <div className="categories-btn" >
                         {data.map(item =>(
-                            <button className="Buttons" onClick={()=>{setidcategorie(item.id_categorie); console.log(idcategorie); setAllHouse(true)}} key={item.id}>{item.categorie} </button>
+                           <div className="ButtonGroup">
+                             {/* <button className="Buttons" onClick={()=>{setidcategorie(item.id_categorie); console.log(idcategorie); setAllHouse(true)}} key={item.id}>{item.categorie} </button> */}
+                            <ButtonGroup className="Buttons" aria-label="Basic example">
+                                <Button className="Buttons-btn" onClick={()=>{setidcategorie(item.id_categorie); console.log(idcategorie); setAllHouse(true)}} key={item.id} variant="secondary">{item.categorie} </Button>
+                            </ButtonGroup>
+                           </div>
+ 
                         ))}
                     </div>
                 </div> 
-
-
-
+                <div className="categories-desktop">
+                    <p>Categories</p>
+                    <div className="ButtonGroup-desk">
+                        
+                        {/* <button  onClick={()=>{ setAllHouse(false)}}  className="button-all">Toutes</button> */}
+                        
+                            <Button className="button-all" onClick={()=>{ setAllHouse(false)}}  variant="secondary">Toutes les maisons</Button>
+                        
+                    </div>
+                    <div className="categories-btn-desk" >
+                        {data.map(item =>(
+                           <div className="ButtonGroup">
+                             {/* <button className="Buttons" onClick={()=>{setidcategorie(item.id_categorie); console.log(idcategorie); setAllHouse(true)}} key={item.id}>{item.categorie} </button> */}
+                            <ButtonGroup className="Buttons" aria-label="Basic example">
+                                <Button className="Buttons-btn" onClick={()=>{setidcategorie(item.id_categorie); console.log(idcategorie); setAllHouse(true)}} key={item.id} variant="secondary">{item.categorie} </Button>
+                            </ButtonGroup>
+                           </div>
+ 
+                        ))}
+                    </div>
+                </div> 
               {allHouse?(
-                 <div className="card">
-                 <div className="text-card">
-                      
-                     {maisonFlitrer.map(item =>(
-                         <div className="map-card" key={item.id}>
-                            <Link className="link" to={`/detail-propriete/${item.id_maison}`}>
-                                <img src={item.image1} alt="" />
-                            </Link>
-                             <div className="row justyfie2">
-                                 <p>
-                                     Maison Moderne en dure
-                                 </p> 
-                                 <p>
-                                     {item.prix}  
-                                 </p>
-                             </div>
-                             <div className="div-quartier">
-                                 <p><i class="fa-solid fa-map-location-dot"></i> {item.id_quartier}</p>
-                             </div>
-                             <div className="row div-quartier-plus">
-                                 <p><i class="fa-sharp fa-solid fa-light-emergency"></i> Tout inclus</p>
-                                 <p> <i class="fa-solid fa-house-signal"></i> wifi</p>
-                                 <p><i class="fa-solid fa-calendar"></i> periode indeterminees</p>
-                             </div>
-                         </div>
-                     ))}
-                     
-                     
-                 </div> 
-             </div>
-              ):(
-                <div className="card-nan-filter">
+                <div className="container shadow-sm">
                     <div className="text-card">
                         
-                        {maisons.map(item =>(
-                            <div className="map-card" key={item.id}>
-                                <Link className="link" to={`/detail-propriete/${item.id_maison}`}> 
-                                  <img src={item.image1} alt="" />
+                        {maisonFlitrer.map(item =>(
+                            <div className="map-card-flitrer col-md-4 mb-5 col-sm-12 map-card-nanfiltrer row shadow-sm" key={item.id}>
+                                <Link className="link" to={`/detail-propriete/${item.id_maison}`}>
+                                    <img className="image-maison w-75" src={item.image1} alt="" />
                                 </Link>
-                                <div className="row justyfie2">
-                                    <p>
-                                        Maison Moderne en dure
-                                    </p> 
-                                    <p>
-                                        {item.prix}  
-                                    </p>
+                                <div className="texte-description">
+                                    <div className="row justyfie2">
+                                        <p>
+                                            {item.prix}  
+                                        </p>
+                                        <p className="mb-5"><i class="fa-solid fa-map-location-dot"></i> {item.description}</p>
+
+                                    </div>
+                                    {/* <div className="div-quartier">
+                                    </div>
+                                    <div className="row div-quartier-plus">
+                                        <p><i class="fa-sharp fa-solid fa-light-emergency"></i> Tout inclus</p>
+                                        <p> <i class="fa-solid fa-house-signal"></i> wifi</p>
+                                    </div> */}
                                 </div>
-                                <div className="div-quartier">
-                                    <p><i class="fa-solid fa-map-location-dot"></i> {item.id_quartier}</p>
-                                </div>
-                                <div className="row div-quartier-plus">
-                                    <p><i class="fa-sharp fa-solid fa-light-emergency"></i> Tout inclus</p>
-                                    <p> <i class="fa-solid fa-house-signal"></i> wifi</p>
-                                    <p><i class="fa-solid fa-calendar"></i> periode indeterminees</p>
+                            </div>
+                        ))} 
+                    </div> 
+                </div>
+              ):(
+                <div className="card-nan-filter align-self-center row container shadow-sm">
+                    <div className="text-card row">
+                        {maisons.map(item =>(
+                            <div className="map-card-nanfiltrer card col-md-4 col-sm-12 mb-5 shadow-sm ml-3" key={item.id}>
+                                <Link className="link" to={`/detail-propriete/${item.id_maison}`}> 
+                                  <img className="w-75" src={item.image1} alt="" />
+                                </Link>
+                                <div className="texte-description">
+                                    <div className="row justyfie2">
+                                        <p>
+                                            {item.prix + " " + "FCFA"}  
+                                        </p>
+                                        <p><i class="fa-solid fa-map-location-dot"></i> {item.description}</p>
+
+                                    </div>
+                                    <div className="div-quartier">
+                                    </div>
+                                    {/* <div className="row div-quartier-plus">
+                                        <p><i class="fa-sharp fa-solid fa-light-emergency"></i> Tout inclus</p>
+                                        <p> <i class="fa-solid fa-house-signal"></i> wifi</p>
+                                    </div> */}
                                 </div>
                             </div>
                         ))}
-                        
-                        
                     </div> 
                 </div>
               )}
-                
-                
-
-
-               
-                {/* <div className="card">
-                    
-                    <div className="text-card">
-                        <Link className="link" to='/propriete'> <img src={imgAlouer} alt="" /></Link>
-                        <div className="row justyfie2">
-                            <p>
-                                Maison Moderne en dure
-                            </p> 
-                            <p>
-                                Rp. 250.000/ Mois
-                            </p>
-                        </div>
-                        <div className="div-quartier">
-                            <p> Ntchengue, derriere soco-tp</p>
-                        </div>
-                        <div className="row div-quartier-plus">
-                            <p> Tout inclus</p>
-                            <p> Avec wifi</p>
-                            <p> periode indeterminees</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="card">
-                    
-                    <div className="text-card">
-                        <Link className="link" to='/propriete'> <img src={imgAlouer} alt="" /></Link>
-                        <div className="row justyfie2">
-                            <p>
-                                Maison Moderne en dure
-                            </p> 
-                            <p>
-                                Rp. 250.000/ Mois
-                            </p>
-                        </div>
-                        <div className="div-quartier">
-                            <p> Ntchengue, derriere soco-tp</p>
-                        </div>
-                        <div className="row div-quartier-plus">
-                            <p> Tout inclus</p>
-                            <p> Avec wifi</p>
-                            <p> periode indeterminees</p>
-                        </div>
-                    </div>
-                </div> */}
             </div>
             <Nav/>
 

@@ -52,7 +52,7 @@ export default function FixedBottomNavigation() {
           <Link className="link" to='/dashboard'><BottomNavigationAction label="Dashboard" icon={<DashboardIcon />} /></Link>
           <Link className="link" to='/quartiers'><BottomNavigationAction label="Localisation" icon={<LocationOnIcon />} /></Link>
           <Link className="link" to='/acceuil'><BottomNavigationAction label="Accueil" icon={<HomeIcon />} /></Link>
-          <Link className="link" to='/acceuil'><BottomNavigationAction label="Compte" icon={<PersonIcon />} /></Link>
+          <Link className="link" to='/se-connecter'><BottomNavigationAction label="Compte" icon={<PersonIcon />} /></Link>
         </BottomNavigation>
       </Paper>
     </Box>

@@ -15,13 +15,87 @@ body{
 .justyfie2{
     justify-content: space-between;
 }
+.button-desketop{
+    display: inline;
+}
+.button-desketop{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3vw;
+}
+.button-desketop .Buttons-desk{
+    width: 20vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-desketop .Buttons-desk p{
+    margin-top: -1vw;
+}
+.button-desketop .icon-text-desk{
+    margin-top: -6vw;
+}
+.categories-desktop .categories-btn-desk{
+    display: flex;
+    margin-top: 5vw;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.map-card-nanfiltrer .texte-description p{
+    color: black;
+    margin-bottom: 5vw;
+    z-index: 2;
+}
+.map-card-filtrer .texte-description p{
+    color: black;
+    margin-bottom: 5vw;
+    z-index: 2;
+}
 
+.categories-desktop .ButtonGroup-desk{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6vw;
+}
+.categories-desktop .ButtonGroup-desk Button{
+    width: 70vw;
+}
+.card-nan-filter .card{
+   margin-top: 4vw;
+   margin-left: 6vw;
+}
+/* .text-card .map-card-nanfiltrer{
+    margin-left: 1vw;
+} */
+.categories-desktop p{
+    color: black;
+    font-size: 5vw;
+    text-align: center;
+}
+.button-mobile{
+    display: none;
+}
+.categories-mobile{
+    display: none;
+}
+
+/* .categories-mobile */
+/* .categories-mobile */
+
+@media only screen and (max-width: 600px) { 
+    .button-desketop{
+        display: none;
+    }
+    .categories-mobile{
+        display: inline;
+    }
 .button{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin-top: 5vw;
-    
 }
 .button button{
     padding: 5vw 4vw;
@@ -32,15 +106,21 @@ body{
     border: none;
     border-radius: 2vw;
     margin: 0 -10vw;
+    color: black;
 }
-.btn-all{
-    width: 25vw;
+.button button p{
+    color: black;
+}
+.button-all{
+    width: 80vw;
     height: 5vh;
     background-color: white;
     box-shadow: 2vw 2vw 2vw #e6e6e6, -0.01vw 0 0 #bebebe;
     border: none;
     z-index: 2;
     border-radius: 2vw;
+    margin-left: 10vw;
+    margin-top: 3vw;
 }
 .Buttons{
     z-index: 2;
@@ -50,7 +130,16 @@ body{
     font-size: 8vw;
     margin-bottom: 5vw;
     color: #0a2525;
-    
+}
+.map-card-flitrer .texte-description p{
+    color: black;
+    /* background-color: red; */
+    z-index: 2;
+}
+.map-card-nanfiltrer .texte-description p{
+    color: black;
+    margin-bottom: 10vw;
+    z-index: 2;
 }
 .categories{
     margin-top: 5vw;
@@ -59,10 +148,19 @@ body{
     margin-top: 5vw;
     display: flex;align-items: center;
     justify-content: space-evenly;
+    width: 100vw;
+    font-size: 3vw;
+}
+.ButtonGroup .Buttons-btn{
+    font-size: 3.2vw;
+    height: 10vh;
+    width: 30vw;
 }
 .categories p{
   margin-left: 2vw;
   font-size: 6.5vw;
+  margin-top: 8vw;
+  color: black;
 }
 .categories .categories-btn button{
     width: auto;
@@ -70,49 +168,20 @@ body{
     border-radius: 4vw;
     height: 5vh;
 }
-.Buttons{
-    margin-bottom: 60vw;
-}
-.Buttons-all{
+
+.Buttonall .Buttons-all{
     z-index: 1;
+    width: 40vw;
 }
-.card-nan-filter{
-    margin-top: 50vw;
+.map-card-nanfiltrer{
+    margin-left: -5vw;
+    height: 60vh;
 }
-/*.map-card{
-    margin-top: 20vw;
+.map-card{
+    transform: translateY(-40vw);
+    height: 40vh;
 }
-
-.card{
-    height: 35vh;
-    width: 100vw;
-    background: url(../assets/images/a-louer.png);
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50vw;
-    position: relative;
-    border-radius: 4vw;
+.categories-desktop{
+    display: none;
 }
-
-.div-quartier{
-    margin-top: 1vw;
-    
 }
-.div-quartier-plus p{
-    font-size: 3.5vw;
-    justify-content: space-around;
-    margin: 0 2vw;
-}
-.div-quartier-plus {
-    margin-left: -2.5vw;
-    margin-top: 3vw;
-}
-.text-card{
-    width: 90vw;
-    
-}
-.text-card img{
-    width: 90vw;
-} */

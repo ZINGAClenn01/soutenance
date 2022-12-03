@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -9,44 +16,34 @@
 .justifie1{
     justify-content: space-between;
 }
-.application{
+.desktop-home{
     background-color: #15679F;
     height: 100vh;
-    width: 100vw;
-   
-
+    width: 100%;
+    margin: auto;
+    background: url(../assets/images/17923e078afd1fc859746df775e346b1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.application .haut{
-    height: 30vh;
-    width: 100vw;
-    background-color: #15679F;
-    display: none;
-}
-.application .blanc{
-   background-color: white;
-    width: 100vw;
-    height: 40vh;
-    margin-top: -1vw;
-}
-.application h2{ 
+.desktop-home h2{ 
     line-height: 5vw;
     letter-spacing: 0.22vw;
     font-size: 5vw;
     font-weight: bold;
     font-family: sans-serif;
     color: white;
-    margin-left: 12vw;
+    margin-left: 4vw;
     margin-top: 0vw;
 }
-.application .image{
-    background: url(../assets/images/imagehome.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 30vh;
-    width: 100vw;
-    z-index: -1;
+.desktop-home .texte-image{
+    display: flex;
+    margin-top: 5vw;
 }
-.application .button-home{
+.desktop-home .imagedesktop{
+    width: 50vw;
+    margin-left: 5vw;
+}
+.desktop-home .button-home{
     position: absolute;
     bottom: 3vw;
     z-index: 1;
@@ -56,35 +53,47 @@
     background-color: black;
     border-radius: 7vw;
 }
-.application .button-home:hover{
+.desktop-home .button-home:hover{
     background-color: black;
 }
 
-.application .link{
+.desktop-home .link{
     color: white;
     font-size: 4vw;
     text-decoration: none;
 }
-.application p{
+/* .desktop-home .blanc{
+    background-color: white;
+     width: 100vw;
+     height: 40vh;
+     margin-top: -1vw;
+ } */
+.desktop-home p{
     z-index: 3;
     position: absolute;
-    bottom: 10vw;
+    bottom: 15vw;
     left: 25vw;
     font-size: 3vw;
     font-weight: bold;
     text-align: center;
     line-height: 5vw;
 }
+.mobile{
+    display: none;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@media only screen and (max-width: 600px) { 
+    .mobile{
+        display: inline;
+    } 
+    .App{
+        background-color: #15679F;
 
-@media only screen and (max-width: 600px) {  
-    .application{
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile{
         height: 100vh;
         width: 100vw;
         background-color: #15679F;
@@ -93,18 +102,7 @@
     .justifie1{
         justify-content: space-between;
     }
-    .application .blanc{
-       background-color: white;
-       height: 22vh;
-        width: 100vw;
-        margin-top: 15.5vw;
-    }
-    .top{
-        height: 10vh;
-        width: 100vw;
-        background-color: #15679F;
-    }
-    .application h2{ 
+    .mobile h2{ 
         line-height: 13vw;
         letter-spacing: 0.22vw;
         font-size: 7.5vw;
@@ -112,17 +110,15 @@
         font-family: sans-serif;
         color: white;
         margin-left: 10vw;
+        transform: translateY(14vw);
     }
-    .application .image{
-        background: url(../assets/images/imagehome.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 30vh;
-        width: 100vw;
-        z-index: -1;
-        margin-top: 0.1vw;
+    h2 span{
+        color: black;
     }
-    .application .button-home{
+   .image-home{
+    width: 100vw;
+   }
+    .mobile .button-home{
         position: absolute;
         bottom: 10vw;
         z-index: 1;
@@ -132,20 +128,21 @@
         background-color: black;
         border-radius: 7vw;
     }
-    .application .link{
+    .mobile .link{
         color: white;
         font-size: 4vw;
         text-decoration: none;
     }
-    .application p{
+    .mobile p{
         z-index: 3;
         position: absolute;
-        bottom: 28vw;
+        bottom: 34vw;
         left: 23vw;
         font-size: 3vw;
         font-weight: bold;
         text-align: center;
         line-height: 5vw;
+        color: black;
     }
 }
 

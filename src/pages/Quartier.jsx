@@ -26,6 +26,19 @@ function Quartier() {
         };
         fetchQuartiers();
     },[])
+
+    const [maisons, setMaisons] = useState([])
+    
+    useEffect(() => {
+      const fetchMaisons = async () => {
+          const result = await axios(
+              'http://localhost:3001/maisons',
+          );
+          setMaisons(result.data);
+      };
+      fetchMaisons();
+  },[])
+
     // console.log(quartiers)
     // let mapQuartier = quartiers.map((item) => {
     //     return (item.quartier)
@@ -99,7 +112,7 @@ function Quartier() {
       <Box sx={{ display: 'flex,bloc', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
         
         {quartiers.map((image) => (
-          <Link className="link" style={{color:'black', textDecoration: 'none'}} to={`/propriete-quartiers/${image.id_quartier}`}>
+          <Link className="link" to={`/propriete-quartier/${image.id_quartier}`}>
             <ImageButton
               focusRipple
               key={image.id_quartier}
@@ -107,7 +120,7 @@ function Quartier() {
                 width: image.width,
               }}
             >
-              <ImageSrc style={{ backgroundImage: `url(${image.image})` }} />
+              <ImageSrc style={{ backgroundImage: `url(${image.image_quartier})` }} />
               <ImageBackdrop className="MuiImageBackdrop-root" />
               <Image>
                 <Typography
@@ -118,7 +131,7 @@ function Quartier() {
                     position: 'relative',
                     p: 4,
                     pt: 2,
-                    pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                    pb: (theme) => `calc(${theme.spacing(2)} + 6px)`,
                   }}
                 >
                   {image.quartier}
