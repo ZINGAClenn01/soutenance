@@ -7,7 +7,8 @@ import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
 import Nav from "../components/Nav";
 import { Link } from "react-router-dom";
-
+import Button from 'react-bootstrap/Button';
+import "./Quartier.css";
 
 
 function Quartier() {
@@ -38,11 +39,11 @@ function Quartier() {
       };
       fetchMaisons();
   },[])
+  // const myStyle = {
+  //   background: quartiers[2].image_quartier,
+  // };console.log(myStyle);
 
-    // console.log(quartiers)
-    // let mapQuartier = quartiers.map((item) => {
-    //     return (item.quartier)
-    // })  
+    
       const ImageButton = styled(ButtonBase)(({ theme }) => ({
         position: 'relative',
         height: 200,
@@ -109,7 +110,7 @@ function Quartier() {
   return (
 
     <div>
-      <Box sx={{ display: 'flex,bloc', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
+      <Box className="btn-mobil" sx={{ display: 'flex,bloc', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
         
         {quartiers.map((image) => (
           <Link className="link" to={`/propriete-quartier/${image.id_quartier}`}>
@@ -143,6 +144,16 @@ function Quartier() {
         ))}
         
       </Box>
+      <div className="btn-desk">
+      {quartiers.map((image) => (
+        <Link className="" to={`/propriete-quartier/${image.id_quartier}`}>
+          <div className='image-image'>
+      <Button className='image-desct' variant="primary" size="lg">
+       {image.quartier}
+      </Button></div>
+      </Link>
+      ))}
+    </div>
       <Nav/> 
     
     </div>

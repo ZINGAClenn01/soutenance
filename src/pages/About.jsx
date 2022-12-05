@@ -146,20 +146,20 @@ const About = () => {
                     </div>
                 </div> 
               {allHouse?(
-                <div className="container shadow-sm">
-                    <div className="text-card">
+                <div className="mom-filter container-fluid con row shadow-sm">
+                    
                         
                         {maisonFlitrer.map(item =>(
-                            <div className="map-card-flitrer col-md-4 mb-5 col-sm-12 map-card-nanfiltrer row shadow-sm" key={item.id}>
+                            <div className="map-card-flitrer col-md-4 shadow-sm" key={item.id}>
                                 <Link className="link" to={`/detail-propriete/${item.id_maison}`}>
-                                    <img className="image-maison w-75" src={item.image1} alt="" />
+                                    <img className="image-maison mt-3 w-75" src={item.image1} alt="" />
                                 </Link>
                                 <div className="texte-description">
                                     <div className="row justyfie2">
                                         <p>
                                             {item.prix}  
                                         </p>
-                                        <p className="mb-5"><i class="fa-solid fa-map-location-dot"></i> {item.description}</p>
+                                        <p className="desc"><i class="fa-solid fa-map-location-dot"></i> {item.description}</p>
 
                                     </div>
                                     {/* <div className="div-quartier">
@@ -172,14 +172,14 @@ const About = () => {
                             </div>
                         ))} 
                     </div> 
-                </div>
+                
               ):(
-                <div className="card-nan-filter align-self-center row container shadow-sm">
-                    <div className="text-card row">
+                <div className="card-nan-filter row container-fluid shadow-sm">
+                    
                         {maisons.map(item =>(
-                            <div className="map-card-nanfiltrer card col-md-4 col-sm-12 mb-5 shadow-sm ml-3" key={item.id}>
+                            <div className="map-card-nanfiltrer card col-md-4 col-sm-12 mb-5 shadow-sm" key={item.id}>
                                 <Link className="link" to={`/detail-propriete/${item.id_maison}`}> 
-                                  <img className="w-75" src={item.image1} alt="" />
+                                  <img className="w-75 mt-3" src={item.image1} alt="" />
                                 </Link>
                                 <div className="texte-description">
                                     <div className="row justyfie2">
@@ -198,7 +198,7 @@ const About = () => {
                                 </div>
                             </div>
                         ))}
-                    </div> 
+                    
                 </div>
               )}
             </div>

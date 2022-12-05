@@ -31,26 +31,36 @@ body{
     justify-content: center;
 }
 .button-desketop .Buttons-desk p{
-    margin-top: -1vw;
+    margin-top: 1vw;
 }
 .button-desketop .icon-text-desk{
-    margin-top: -6vw;
+    margin-top: 1vw;
 }
 .categories-desktop .categories-btn-desk{
     display: flex;
-    margin-top: 5vw;
+    margin-top: 2vw;
+    margin-bottom: 3vw;
     align-items: center;
     justify-content: space-evenly;
 }
+
+.map-card-flitrer{
+    height: 90vh;
+    margin-left: 5vw;
+    margin-bottom: 5vw;
+}
 .map-card-nanfiltrer .texte-description p{
     color: black;
-    margin-bottom: 5vw;
+    margin-bottom: 2vw;
     z-index: 2;
 }
 .map-card-filtrer .texte-description p{
     color: black;
-    margin-bottom: 5vw;
+    margin-bottom: 0vw;
     z-index: 2;
+}
+.mom-filter{
+    margin-left: 10vw;
 }
 
 .categories-desktop .ButtonGroup-desk{
@@ -65,6 +75,7 @@ body{
 .card-nan-filter .card{
    margin-top: 4vw;
    margin-left: 6vw;
+   height: 95vh;
 }
 /* .text-card .map-card-nanfiltrer{
     margin-left: 1vw;
@@ -131,6 +142,15 @@ body{
     margin-bottom: 5vw;
     color: #0a2525;
 }
+.map-card-flitrer{
+    height: 65vh;
+    margin-left: 5vw;
+    margin-bottom: 5vw;
+}
+.map-card-flitrer .desc{
+    width: 90vw;
+}
+
 .map-card-flitrer .texte-description p{
     color: black;
     /* background-color: red; */
@@ -144,8 +164,14 @@ body{
 .categories{
     margin-top: 5vw;
 }
+.card-nan-filter .card{
+    margin-top: 4vw;
+    margin-left: 3vw;
+    height: 70vh;
+ }
 .categories .categories-btn{
     margin-top: 5vw;
+    margin-bottom: 5vw;
     display: flex;align-items: center;
     justify-content: space-evenly;
     width: 100vw;

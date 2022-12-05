@@ -42,16 +42,15 @@ export default function SignUp() {
     console.log({
       nom: data.get("lastName"),
       prenom: data.get("firstName"),
-      phone: data.get("phone"),
       email: data.get("email"),
+      phone: data.get("phone"),
       password: data.get("password"),
     });
     const post = {
-      nom: data.get("lastName"),
-      prenom: data.get("firstName"),
-      date_de_naissance: Date,
-      telephone: data.get("phone"),
-      email_proprio: data.get("email"),
+      nom_proprietaire : data.get("lastName"),
+      prenom_proprietaire : data.get("firstName"),
+      email_proprietaire: data.get("email"),
+      téléphone_proprietaire: data.get("phone"),
       password: data.get("password"),
     };
 
@@ -60,7 +59,7 @@ export default function SignUp() {
     // }
     setname(data.get("firstName"));
     axios
-      .post("http://localhost:3001/proprietaires", post)
+      .post("http://localhost:3001/ajout/proprietaires", post)
       .then((res) => {
         console.log(res);
         if (String(res.data) === "POSTED") {

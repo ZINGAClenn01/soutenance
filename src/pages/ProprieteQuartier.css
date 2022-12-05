@@ -1,32 +1,51 @@
-
-h5,p {
-    color: black;
-    transform: translateY(5vw);
-}
-
-/* .card{
-    height: 35vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.map-card{
     margin-top: 5vw;
-    position: relative;
-    border-radius: 4vw;
+} 
+.Carousel-item h5 {
+    color: black;
+    transform: translateY(1vw);
+    margin-bottom: 1vw;
 }
-.div-quartier{
-    margin-top: 1vw;
-    
+.Carousel-item p {
+    color: black;
+    transform: translateY(1vw);
+    margin-bottom: 3vw;
 }
-.div-quartier-plus p{
-    font-size: 3.5vw;
-    justify-content: space-around;
-    margin: 0 2vw;
+.Carousel img {
+    margin-left: 10vw;
 }
-.div-quartier-plus {
-    margin-left: -2.5vw;
-    margin-top: 3vw;
+.carte{
+    height: auto;
 }
+.mere-carte{
+    height: 102vw;
+}
+
+@media only screen and (max-width: 600px) { 
+
+.Carousel h5 {
+    color: black;
+    transform: translateY(1vw);
+    width: 80vw;
+}
+.Carousel p {
+    color: black;
+    transform: translateY(1vw);
+    width: 80vw;
+}
+
+.Carousel{
+    height: 60vh;
+    margin-left: -3.2vw;
+    margin-bottom: 4vw;
+}
+.mere-carte{
+    height: 122vw;
+}
+.carte{
+    height: auto;
+}
+
 .text-card{
     width: 90vw;
     
@@ -38,4 +57,5 @@ h5,p {
     width: 90vw;
     margin-top: 10vw;
    
-} */
+}
+}

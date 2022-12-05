@@ -30,24 +30,26 @@ const ProprieteQuartier = () => {
   }
 
   return (
-    <div>
-      <div className="card">
-        <div className="text-card">
+    <div className="mere-carte">
+      
+      <div className="container carte"> 
           {result.map((item) => (
-            <div className="map-card" key={item.id}>
-              <Carousel variant="dark">
-                <Carousel.Item>
+            <div className="map-card container" key={item.id}>
+              <Carousel
+                className="Carousel card"
+              >
+                <Carousel.Item className="Carousel-item col-md-12 col-sm-4 mb-5 shadow-sm">
                   <img
-                    className="d-block w-100"
+                    className="d-block card w-75"
                     src={item.image1}
-                    alt="First slide"
+                    alt="Second slide"
                   />
                   <h5>{item.prix + " " + "FCFA"} </h5>
                   <p>{item.description}</p>
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
-                    className="d-block w-100"
+                    className="d-block card w-75"
                     src={item.image2}
                     alt="Second slide"
                   />
@@ -56,9 +58,27 @@ const ProprieteQuartier = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
-                    className="d-block w-100"
+                    className="d-block card w-75"
                     src={item.image3}
                     alt="Third slide"
+                  />
+                  <h5>{item.prix + " " + "FCFA"} </h5>
+                  <p>{item.description}</p>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block card w-75"
+                    src={item.image4}
+                    alt="First slide"
+                  />
+                  <h5>{item.prix + " " + "FCFA"} </h5>
+                  <p>{item.description}</p>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block card w-75"
+                    src={item.image5}
+                    alt="First slide"
                   />
                   <h5>{item.prix + " " + "FCFA"} </h5>
                   <p>{item.description}</p>
@@ -66,8 +86,8 @@ const ProprieteQuartier = () => {
               </Carousel>
             </div>
           ))}
+        
         </div>
-      </div>
       <Nav />
     </div>
   );

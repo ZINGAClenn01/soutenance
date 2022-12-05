@@ -20,14 +20,9 @@ import Stack from '@mui/material/Stack';
 var index = localStorage.getItem('proprio')
 console.log(index);
 
-const actions = [
-  { icon: <SaveIcon />, name: 'Enreigister' },
-  { icon: <DeleteIcon />, name: 'Supprimer' },
-  { icon: <EditIcon />, name: 'Editer' },
-  { icon: <AddIcon />, name: 'Ajouter' },
-];
-
 function DarkExample() {
+
+  
   const [maisons, setMaisons] = useState([]);
   useEffect(() => {
     const fetchMaisons = async () => {
@@ -37,15 +32,23 @@ function DarkExample() {
     fetchMaisons();
   }, []);
 
+
+
+
+
   const [proprietaires, setProprietaires] = useState([]);
   useEffect(() => {
     const fetchproprietaires = async () => {
       const result = await axios("http://localhost:3001/proprietaires");
       setProprietaires(result.data[index].id_proprietaire);
-      console.log();
+      console.log(result.data[index].id_proprietaire);
+      console.log(proprietaires);
     };
     fetchproprietaires(proprietaires);
   }, []);
+
+
+
 
   const [maison, setMaison] = useState ([])
   function maisonproprietaire () {
@@ -57,12 +60,25 @@ function DarkExample() {
   
   useEffect(() => {
     maisonproprietaire();
-  }, []);
+  });
+
+
+
+
   function supMaison(event) {
     event.preventDefault();
-    axios.delete("http://localhost:3001/delete/maison/6",).then(console.log('delete'))
+    axios.delete("http://localhost:3001/delete/maison/:id",).then(console.log('delete'))
   }
   
+
+  function deletehouse (id_maison) {
+    const maisonFlitrer = maisons.filter((item) =>{
+      return item.id_maison == id_maison
+    })
+    var id = maisonFlitrer[0].id_maison
+    axios.delete(`http://localhost:3001/delete/maison/${id}`,).then(console.log('delete'))
+
+  }
   return (
     <div>
       {maison.map((item) => (
@@ -85,7 +101,7 @@ function DarkExample() {
                 <td>{item.description}</td>
               </tr>
               <Stack direction="row" spacing={2}>
-      <Button onClick={supMaison} variant="outlined" startIcon={<DeleteIcon />}>
+      <Button onClick={()=>{deletehouse(item.id_maison)}} variant="outlined" startIcon={<DeleteIcon />}>
         Delete
       </Button>
       

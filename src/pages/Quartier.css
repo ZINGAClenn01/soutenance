@@ -1,0 +1,36 @@
+.btn-desk{
+    display: inline;
+    margin: auto;
+    height: 120vh;
+    background: linear-gradient(rgb(117, 117, 231), rgb(94, 94, 94),white);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.image-desct{
+    width: 70vw;
+}
+.image-image{
+    background: black;
+    width: 80vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-mobil{
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    .btn-desk{
+        display: none;
+    }
+    .btn-mobil{
+        display: inline;
+    }
+    
+}

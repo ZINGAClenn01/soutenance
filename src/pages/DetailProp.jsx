@@ -5,16 +5,20 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
+import Button from 'react-bootstrap/Button';
+
 
 const DetailProp = () => {
   const [maisons, setMaisons] = useState([]);
-
+  const [num, setNum] = useState([]);
   const idMaison = useLocation().pathname.split("/")[2];
   // console.log(idMaison);
   useEffect(() => {
     const fetchMaisons = async () => {
       const result = await axios("http://localhost:3001/maisons");
       setMaisons(result.data);
+      setNum(result.data[0].telephone_proprietaire)
+      console.log(num);
     };
     fetchMaisons();
   }, []);
@@ -26,40 +30,58 @@ const DetailProp = () => {
       return maison;
     }
   }
+  
 
   return (
-    <div>
-      <div className="card">
-        <div className="text-card">
+    <div className="mere-carte">
+      
+      <div className="carte"> 
           {result.map((item) => (
-            <div className="map-card" key={item.id}>
+            <div className="map-card container" key={item.id}>
               <Carousel
-                className="Carousel card col-md-8 col-sm-12 mb-5 shadow-sm ml-10"
-                variant="dark"
+                className="Carousel card"
               >
-                <Carousel.Item>
+                <Carousel.Item className="Carousel col-md-12 col-sm-12 mb-5 shadow-sm">
                   <img
-                    className="d-block w-75"
+                    className="d-block card w-75"
                     src={item.image1}
-                    alt="First slide"
+                    alt="Second slide"
                   />
                   <h5>{item.prix + " " + "FCFA"} </h5>
                   <p>{item.description}</p>
                 </Carousel.Item>
-                <Carousel.Item>
+                <Carousel.Item className="Carousel col-md-12 col-sm-12 mb-5 shadow-sm">
                   <img
-                    className="d-block w-100"
+                    className="d-block card w-75"
                     src={item.image2}
                     alt="Second slide"
                   />
                   <h5>{item.prix + " " + "FCFA"} </h5>
                   <p>{item.description}</p>
                 </Carousel.Item>
-                <Carousel.Item>
+                <Carousel.Item className="Carousel col-md-12 col-sm-12 mb-5 shadow-sm">
                   <img
-                    className="d-block w-100"
+                    className="d-block card w-75"
                     src={item.image3}
                     alt="Third slide"
+                  />
+                  <h5>{item.prix + " " + "FCFA"} </h5>
+                  <p>{item.description}</p>
+                </Carousel.Item>
+                <Carousel.Item className="Carousel col-md-12 col-sm-12 mb-5 shadow-sm">
+                  <img
+                    className="d-block card w-75"
+                    src={item.image4}
+                    alt="First slide"
+                  />
+                  <h5>{item.prix + " " + "FCFA"} </h5>
+                  <p>{item.description}</p>
+                </Carousel.Item>
+                <Carousel.Item className="Carousel col-md-12 col-sm-12 mb-5 shadow-sm">
+                  <img
+                    className="d-block card w-75"
+                    src={item.image5}
+                    alt="First slide"
                   />
                   <h5>{item.prix + " " + "FCFA"} </h5>
                   <p>{item.description}</p>
@@ -67,8 +89,16 @@ const DetailProp = () => {
               </Carousel>
             </div>
           ))}
+        <div className="mom-btn-contact">
+        <Button className='btn-contact' onClick={(e)=> alert(maisons)} variant="primary" size="lg">
+            contactez le proprietaire
+      </Button> 
+      <Button className='btn-contact' variant="primary" size="lg">
+            retour
+      </Button> 
         </div>
-      </div>
+        </div>
+        
       <Nav />
     </div>
   );
