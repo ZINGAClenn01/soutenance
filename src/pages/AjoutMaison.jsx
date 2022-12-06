@@ -166,47 +166,47 @@ function BasicExample() {
         <br />
         <Form.Group
           onChange={(e) => setImage1form(e.target.value)}
-          controlId="formFileSm"
+          controlId="formtextSm"
           className="mb-3"
         >
           <Form.Label>image1</Form.Label>
-          <Form.Control type="file" size="sm" />
+          <Form.Control type="text" size="sm" />
         </Form.Group>
 
         <Form.Group
           onChange={(e) => setImage2form(e.target.value)}
-          controlId="formFileSm"
+          controlId="formtextSm"
           className="mb-3"
         >
           <Form.Label>image2</Form.Label>
-          <Form.Control type="file" size="sm" />
+          <Form.Control type="text" size="sm" />
         </Form.Group>
 
         <Form.Group
           onChange={(e) => setImage3form(e.target.value)}
-          controlId="formFileSm"
+          controlId="formtextSm"
           className="mb-3"
         >
           <Form.Label>image3</Form.Label>
-          <Form.Control type="file" size="sm" />
+          <Form.Control type="text" size="sm" />
         </Form.Group>
 
         <Form.Group
           onChange={(e) => setImage4form(e.target.value)}
-          controlId="formFileSm"
+          controlId="formtextSm"
           className="mb-3"
         >
           <Form.Label>image4</Form.Label>
-          <Form.Control type="file" size="sm" />
+          <Form.Control type="text" size="sm" />
         </Form.Group>
 
         <Form.Group
           onChange={(e) => setImage5form(e.target.value)}
-          controlId="formFileSm"
+          controlId="formtextSm"
           className="mb-3"
         >
           <Form.Label>image5</Form.Label>
-          <Form.Control type="file" size="sm" />
+          <Form.Control type="text" size="sm" />
         </Form.Group>
 
         <Button onClick={envoiMaison} variant="primary" type="submit">
