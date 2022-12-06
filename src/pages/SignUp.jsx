@@ -59,7 +59,7 @@ export default function SignUp() {
     // }
     setname(data.get("firstName"));
     axios
-      .post("http://localhost:3001/ajout/proprietaires", post)
+      .post("http://localhost:3001/ajout/proprietaire", post)
       .then((res) => {
         console.log(res);
         if (String(res.data) === "POSTED") {
