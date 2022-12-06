@@ -28,7 +28,7 @@ const theme = createTheme({
       main: "#262D44",
     },
     secondary: {
-      main: "#8AE0AA",
+      main: "#0B5ED7",
     },
   },
 });
@@ -107,7 +107,6 @@ export default function SignUp() {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  variant="standard"
                   required
                   fullWidth
                   id="lastName"
@@ -119,7 +118,6 @@ export default function SignUp() {
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  variant="standard"
                   autoComplete="given-name"
                   name="firstName"
                   required
@@ -132,7 +130,6 @@ export default function SignUp() {
               <br />
               <Grid item xs={12}>
                 <TextField
-                  variant="standard"
                   required
                   fullWidth
                   id="email"
@@ -143,7 +140,6 @@ export default function SignUp() {
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                  variant="standard"
                   required
                   fullWidth
                   id="phone"
@@ -154,7 +150,6 @@ export default function SignUp() {
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                  variant="standard"
                   required
                   fullWidth
                   name="password"
@@ -193,7 +188,7 @@ export default function SignUp() {
                   <Button onClick={handleClose} id="backtoregistering">
                     Retour
                   </Button>
-                  <Link href="/Ajouter-un-article">
+                  <Link href="/ajouter-une-maison">
                     <Button autoFocus id="gotologin">
                       Se connecter
                     </Button>

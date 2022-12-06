@@ -10,6 +10,7 @@ import ProprieteQuartier from './pages/ProprieteQuartier'
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import AjoutMaison from './pages/AjoutMaison';
+import ModifierMaison from './pages/AjoutMaison';
 // import './styles/index.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import {useState} from 'react'
@@ -31,6 +32,7 @@ const App = () => {
           <Route path='/se-connecter' element={<SignIn/>}/>
           <Route path='/inscription' element={<SignUp/>}/>
           <Route path='/ajouter-une-maison' element={<AjoutMaison/>}/>
+          <Route path='/modifier-une-maison' element={<ModifierMaison/>}/>
       </Routes>
     </BrowserRouter>
   );

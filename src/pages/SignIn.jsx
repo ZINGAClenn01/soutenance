@@ -27,7 +27,7 @@ const theme = createTheme({
     },
     secondary: {
 
-      main: '#8AE0AA',
+      main: '#0B5ED7',
       
     },
   },
@@ -118,7 +118,6 @@ export default function SignIn() {
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
-              variant="standard"
 
               required
               fullWidth
@@ -133,7 +132,6 @@ export default function SignIn() {
             />
             <TextField
               margin="normal"
-              variant="standard"
 
               required
               fullWidth
