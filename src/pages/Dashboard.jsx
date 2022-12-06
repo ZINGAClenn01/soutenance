@@ -97,7 +97,7 @@ const [putm, setputm] = useState("")
 
   useEffect(() => {
     maisonproprietaire();
-  }, []);
+  });
 
   const [categorieform, setCategorieform] = useState("");
   const [quartierform, setQuartierform] = useState("");
