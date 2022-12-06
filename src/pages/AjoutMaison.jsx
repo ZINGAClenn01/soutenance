@@ -28,11 +28,11 @@ function BasicExample() {
   const [salonform, setSalonform] = useState("");
   const [coordonneesform, setCoordonneesform] = useState("");
   const [telephoneform, setTelephoneform] = useState("");
-  const [image1form, setImage1form] = useState("image");
-  const [image2form, setImage2form] = useState("image");
-  const [image3form, setImage3form] = useState("image");
-  const [image4form, setImage4form] = useState("image");
-  const [image5form, setImage5form] = useState("image");
+  const [image1form, setImage1form] = useState("");
+  const [image2form, setImage2form] = useState("");
+  const [image3form, setImage3form] = useState("");
+  const [image4form, setImage4form] = useState("");
+  const [image5form, setImage5form] = useState("");
   var nouvelleMaison = {
     id_categorie: parseInt(categorieform),
     id_quartier: parseInt(quartierform),
