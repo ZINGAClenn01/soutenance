@@ -212,7 +212,7 @@ function BasicExample() {
         <Button onClick={envoiMaison} variant="primary" type="submit">
           Submit
         </Button>
-        <Link href="/dashboard" variant="body2">
+        <Link to="/dashboard" href="/dashboard" variant="body2">
 
         <Button variant="primary" style={{marginLeft: '3vw'}} type="submit" >
           retour
